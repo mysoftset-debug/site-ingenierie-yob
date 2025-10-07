@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos Contacts - INGENIERIE CHEZ YOB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="formations.html">Nos Formations</a></li>
+            <li><a href="articles.html">Nos articles</a></li>
+            <li><a href="contact.html">Nos Contacts</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+        </ul>
+    </nav>
+
+    <div id="contact" class="section">
+        <h2>Nos Contacts</h2>
+        <p><strong>Adresse :</strong> Aglouza carrefour, entre la 4è et 5è von en allant vers le nouveau pont (Cocotomey)</p>
+        <p><strong>Téléphones :</strong> +229 62 94 25 59 / 49 43 20 74 / 65 07 53 99 / 92 34 75 77</p>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span>Nos formations en génie logiciel démarrent le 1er Novembre 2025</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stickyTitle = document.querySelector('.section h2');
+            if (stickyTitle) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                window.addEventListener('scroll', function() {
+                    const stickyPoint = stickyTitle.parentElement.offsetTop - navHeight;
+                    if (window.scrollY > stickyPoint) {
+                        stickyTitle.classList.add('is-sticky');
+                    } else {
+                        stickyTitle.classList.remove('is-sticky');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

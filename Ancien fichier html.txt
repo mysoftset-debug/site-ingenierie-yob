@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de Présentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; /* Réinitialisation de la marge */
+            padding: 0; /* Réinitialisation du padding */
+            background: #f9f9f9; 
+            padding-bottom: 60px; /* Espace pour la bande défilante */
+        }
+
+        /* Styles du menu de navigation */
+        nav {
+            background-color: rgb(0, 100, 0);
+            overflow: hidden;
+            position: sticky; /* Figer le menu */
+            top: 0; /* Le coller en haut */
+            z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
+            width: 100%;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s; /* Animation de transition douce */
+        }
+
+        nav li a:hover {
+            color: yellow;
+        }
+
+        /* Style pour la section d'accueil avec photo */
+        .accueil-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .accueil-img img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px; /* Cadre rectangulaire avec coins arrondis */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Ombre */
+            border: 4px solid #fff; /* Bordure blanche pour l'effet de sortie */
+            margin-bottom: 15px; /* Espace entre les photos */
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: darkgreen;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .container { 
+            max-width: 800px; /* Augmenté pour correspondre aux sections */
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        p { color: #555; }
+
+        .ticker-wrap {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(0, 100, 0);
+            color: #fff;
+            padding: 15px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .ticker-move {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: ticker 50s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Pour les petits écrans */
+        @media (max-width: 768px) {
+            .accueil-flex {
+                flex-direction: column; /* Mettre l'image au-dessus du texte */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Nos Services</a></li>
+            <li><a href="#formations">Nos Formations</a></li>
+            <li><a href="#articles">Nos articles</a></li>
+            <li><a href="#contact">Nos Contacts</a></li>
+            <li><a href="#apropos">A propos</a></li>
+        </ul>
+    </nav>
+
+    <div id="accueil" class="container">
+        <div class="accueil-flex">
+            <div class="accueil-text">
+                <h1>Bienvenue chez INGENIERIE CHEZ YOB</h1>
+                <p>Centre de formation et de développement en informatique.</p>
+                <p>Je suis <strong>Yobessou DANHOUBO</strong>, passionné par le développement web et la technologie. Sur ce site, vous trouverez des informations on nos compétences, nos projets et comment nous contacter.</p>
+            </div>
+            <div class="accueil-img">
+                <img src="profile.jpg" alt="Photo de Yobessou DANHOUBO">
+                <img src="profile2.jpg" alt="Photo de Yobessou DANHOUBO au bureau">
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="section">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Conception de site web, d'application web & mobile</li>
+            <li>Conception d'affiche publicitaire, Flyers, faire-part, carte de visite...</li>
+            <li>Conception de logiciel de gestion personnalisé</li>
+            <li>Maintenance des ordinateurs...</li>
+            <li>Installation d'imprimante, de caméra de vidéo de surveillance...</li>
+            <li>Achat et vente d'équipements informatiques...</li>
+        </ul>
+    </div>
+
+    <div id="formations" class="section">
+        <h2>Nos Formations</h2>
+        <ul>
+            <li>Initiation à l'informatique</li>
+            <li>Secrétariat</li>
+            <li>Graphisme</li>
+            <li>Algorithme et Programmation</li>
+            <li>Développement Web</li>
+            <li>Maintenance informatique et réseau</li>
+            <li>Génie Logiciel</li>
+        </ul>
+    </div>
+
+    <div id="articles" class="section">
+        <h2>Nos Articles</h2>
+        <p>Contenu à venir...</p>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Nos Contacts</h2>
+        <p><strong>Adresse :</strong> Aglouza carrefour, entre la 4è et 5è von en allant vers le nouveau pont (Cocotomey)</p>
+        <p><strong>Téléphones :</strong> +229 62 94 25 59 / 49 43 20 74 / 65 07 53 99 / 92 34 75 77</p>
+    </div>
+
+    <div id="apropos" class="section">
+        <h2>À Propos</h2>
+        <p>INGENIERIE CHEZ YOB est votre partenaire de confiance pour tous vos besoins en développement informatique et en formation. Nous nous engageons à fournir des services de qualité et des formations adaptées au marché de l'emploi.</p>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span>Nos formations en génie logiciel démarrent le 1er Novembre 2025</span>
+        </div>
+    </div>
+</body>
+</html>

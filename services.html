@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos Services - INGENIERIE CHEZ YOB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="formations.html">Nos Formations</a></li>
+            <li><a href="articles.html">Nos articles</a></li>
+            <li><a href="contact.html">Nos Contacts</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+        </ul>
+    </nav>
+
+    <div id="services" class="section">
+        <h2>Nos Services</h2>
+        <div class="service-list">
+
+            <div class="service-item">
+                <img src="images/web-dev.jpg" alt="Développement web et mobile">
+                <div class="service-text">
+                    <h3>Conception de site web, d'application web & mobile</h3>
+                    <p>Obtenez une présence en ligne professionnelle avec un site web moderne, rapide et adapté à tous les écrans. Nous développons des solutions sur mesure, du site vitrine à l'application complexe, pour vous aider à atteindre vos objectifs et à vous connecter avec votre audience.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="images/graphic-design.jpg" alt="Conception graphique">
+                <div class="service-text">
+                    <h3>Conception d'affiche, Flyers, carte de visite...</h3>
+                    <p>Marquez les esprits avec une identité visuelle forte. Nous créons pour vous des supports de communication percutants (logos, flyers, cartes de visite, affiches) qui reflètent votre professionnalisme et captent l'attention de vos futurs clients.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="images/software.jpg" alt="Conception de logiciel">
+                <div class="service-text">
+                    <h3>Conception de logiciel de gestion personnalisé</h3>
+                    <p>Optimisez la gestion de votre entreprise avec un logiciel conçu spécifiquement pour vos besoins. Fini les tableurs compliqués, nous développons des outils intuitifs pour gérer vos stocks, votre facturation, vos clients ou toute autre activité clé de votre métier.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="images/maintenance.jpg" alt="Maintenance informatique">
+                <div class="service-text">
+                    <h3>Maintenance des ordinateurs</h3>
+                    <p>Assurez la longévité et les performances de votre parc informatique. Nous proposons des services de diagnostic, de réparation, de nettoyage et d'optimisation pour vos ordinateurs, afin de prévenir les pannes et de garantir un environnement de travail fluide.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="images/hardware.jpg" alt="Installation de matériel">
+                <div class="service-text">
+                    <h3>Installation d'imprimante, de caméra de surveillance...</h3>
+                    <p>Confiez-nous l'installation et la configuration de vos périphériques. Que ce soit pour mettre en place un réseau d'imprimantes ou installer un système de vidéosurveillance pour sécuriser vos locaux, nous garantissons une installation professionnelle et fonctionnelle.</p>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <img src="images/sales.jpg" alt="Vente de matériel informatique">
+                <div class="service-text">
+                    <h3>Achat et vente d'équipements informatiques</h3>
+                    <p>Bénéficiez de conseils d'experts pour l'acquisition de votre matériel. Nous vous aidons à choisir les équipements (ordinateurs, serveurs, composants) les plus adaptés à vos besoins et à votre budget, et nous proposons également du matériel de qualité à la vente.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span>Nos formations en génie logiciel démarrent le 1er Novembre 2025</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stickyTitle = document.querySelector('.section h2');
+            const navHeight = document.querySelector('nav').offsetHeight;
+
+            // On vérifie la position au chargement de la page et à chaque défilement
+            window.addEventListener('scroll', function() {
+                // La position où le titre doit devenir "sticky"
+                const stickyPoint = stickyTitle.parentElement.offsetTop - navHeight;
+
+                if (window.scrollY > stickyPoint) {
+                    stickyTitle.classList.add('is-sticky');
+                } else {
+                    stickyTitle.classList.remove('is-sticky');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

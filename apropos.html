@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À Propos - INGENIERIE CHEZ YOB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="formations.html">Nos Formations</a></li>
+            <li><a href="articles.html">Nos articles</a></li>
+            <li><a href="contact.html">Nos Contacts</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+        </ul>
+    </nav>
+
+    <div id="apropos" class="section">
+        <h2>À Propos</h2>
+        <p>INGENIERIE CHEZ YOB est votre partenaire de confiance pour tous vos besoins en développement informatique et en formation. Nous nous engageons à fournir des services de qualité et des formations adaptées au marché de l'emploi.</p>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span>Nos formations en génie logiciel démarrent le 1er Novembre 2025</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stickyTitle = document.querySelector('.section h2');
+            if (stickyTitle) {
+                const navHeight = document.querySelector('nav').offsetHeight;
+                window.addEventListener('scroll', function() {
+                    const stickyPoint = stickyTitle.parentElement.offsetTop - navHeight;
+                    if (window.scrollY > stickyPoint) {
+                        stickyTitle.classList.add('is-sticky');
+                    } else {
+                        stickyTitle.classList.remove('is-sticky');
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

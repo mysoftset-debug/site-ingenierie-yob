@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos Services - INGENIERIE CHEZ YOB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="formations.html">Nos Formations</a></li>
+            <li><a href="articles.html">Nos articles</a></li>
+            <li><a href="contact.html">Nos Contacts</a></li>
+            <li><a href="apropos.html">A propos</a></li>
+        </ul>
+    </nav>
+
+    <div id="services" class="section">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Conception de site web, d'application web & mobile</li>
+            <li>Conception d'affiche publicitaire, Flyers, faire-part, carte de visite...</li>
+            <li>Conception de logiciel de gestion personnalisé</li>
+            <li>Maintenance des ordinateurs...</li>
+            <li>Installation d'imprimante, de caméra de vidéo de surveillance...</li>
+            <li>Achat et vente d'équipements informatiques...</li>
+        </ul>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span>Nos formations en génie logiciel démarrent le 1er Novembre 2025</span>
+        </div>
+    </div>
+</body>
+</html>

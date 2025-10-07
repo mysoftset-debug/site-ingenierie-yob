@@ -1,0 +1,248 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9; 
+    padding-bottom: 60px; /* Espace pour la bande défilante */
+}
+
+/* Styles du menu de navigation */
+nav {
+    background-color: rgb(0, 100, 0);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: yellow;
+}
+
+/* Style pour la section d'accueil avec photo */
+.accueil-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.accueil-img img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 4px solid #fff;
+    margin-bottom: 15px;
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    /* Style initial du titre */
+    color: darkgreen;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+    
+    /* Préparation pour l'effet sticky */
+    position: sticky;
+    top: 48px; /* Hauteur de la nav, pour se coller en dessous */
+    z-index: 999;
+    
+    /* Apparence par défaut (transparent) */
+    background: transparent;
+    box-shadow: none;
+    margin: 0 0 20px 0;
+    padding: 15px 0;
+    transition: all 0.2s ease-in-out; /* Animation douce */
+}
+
+/* Nouvelle classe qui sera ajoutée par JavaScript au défilement */
+.section h2.is-sticky {
+    background: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre pour l'effet décollé */
+    
+    /* Compensation du padding du conteneur pour prendre toute la largeur */
+    margin: 0 -20px 20px -20px;
+    padding: 15px 20px;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.section li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.container { 
+    max-width: 800px;
+    margin: 40px auto; 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 { color: #333; }
+p { color: #555; }
+
+.ticker-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 100, 0);
+    color: #fff;
+    padding: 15px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ticker-move {
+    display: inline-block;
+    white-space: nowrap;
+
+    animation: ticker 50s linear infinite;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pour les petits écrans */
+@media (max-width: 768px) {
+    .accueil-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Styles pour la page Services */
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espace entre chaque service */
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espace entre l'image et le texte */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* S'assure que l'image remplit l'espace sans se déformer */
+    border-radius: 8px;
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
+}
+
+.service-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.service-item p {
+    margin-bottom: 0;
+}
+
+/* Responsive pour les services sur petits écrans */
+@media (max-width: 600px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Styles pour la page Formations */
+.formation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.formation-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.formation-item:last-child {
+    border-bottom: none;
+}
+
+.formation-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.formation-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.formation-item p {
+    margin-bottom: 10px;
+}
+
+.formation-meta {
+    font-size: 1.1em;
+}
+
+.formation-meta .details {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive pour les formations sur petits écrans */
+@media (max-width: 600px) {
+    .formation-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
